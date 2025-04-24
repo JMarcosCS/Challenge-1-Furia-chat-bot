@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.furia-landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.furia-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.furia-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.furia-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.furia-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.furia-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.furia-title-gradient {
+  background: linear-gradient(to right, #f97316, #eab308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.furia-subtitle {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-weight: 800;
+  color: #fb923c;
+  animation: pulse 2s infinite;
+}
+
+/* Textos */
+.furia-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.furia-highlight {
+  font-weight: 700;
+  color: #fdba74;
+}
+
+/* Container do Chatbot - Ajustes para proporção perfeita */
+.furia-chat-container {
+  width: 100%;
+  height: 70vh; /* Altura relativa à viewport */
+  min-height: 500px;
+  max-height: 800px;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos do Widget do Chatbot - Ajustes críticos */
+#chatling-inline-bot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#chatling-embed-container {
+  width: 100% !important;
+  height: 100% !important;
+  flex: 1;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#chatling-embed-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  border: none !important;
+  flex: 1;
+}
+
+/* Ajuste específico para o formulário interno */
+#chatling-embed-container div {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1;
+}
+
+/* Rodapé */
+.furia-footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Animações */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Responsividade Aprimorada */
+@media (max-width: 1024px) {
+  .furia-chat-container {
+    height: 65vh;
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .furia-content {
+    padding: 1rem;
+  }
+  
+  .furia-chat-container {
+    height: 60vh;
+    min-height: 400px;
+    margin: 1rem 0;
+  }
+  
+  .furia-title {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+  
+  .furia-subtitle {
+    font-size: clamp(1rem, 4.5vw, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .furia-chat-container {
+    height: 65vh;
+    min-height: 350px;
+    border-radius: 8px;
+  }
+  
+  #chatling-inline-bot,
+  #chatling-embed-container {
+    min-height: 350px !important;
+  }
+  
+  .furia-title {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+}

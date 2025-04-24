@@ -14,7 +14,7 @@ Este é um projeto de chatbot interativo para os fãs do time FURIA, onde os usu
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/usuario/furia-chat.git
+    git clone https://github.com/JMarcosCS/Challenge-1-Furia-chat-bot.git
     ```
 2. Instale as dependências:
     ```bash
@@ -25,10 +25,16 @@ Este é um projeto de chatbot interativo para os fãs do time FURIA, onde os usu
     npm run dev
     ```
 
-Acesse `http://localhost:3000` para ver a aplicação funcionando.
+Acesse `http://localhost:5173` para ver a aplicação funcionando.
+
+## Como Costumizar o Chat
+
+Acesse: `https://app.chatling.ai/projects/4879855728/chatbots/1227178961/data-sources` e costumize de seu gosto.
+
+Obs.: Irá precisar criar uma conta e após costumizado deverá inserir em seu código da forma correta seguindo a documentação do Chatling
 
 ## Funcionalidades
 
-- **Landing Page**: A página de entrada do projeto com uma introdução sobre a FURIA e um botão para entrar no chat.
-- **Chat**: Um chat interativo com mensagens e avatares de jogadores da FURIA, além de sugestões de comandos.
+- **Landing Page**: A página de entrada do projeto com uma introdução sobre a FURIA e um Chat para aproveitar e descobrir um pouco mais sobre a FURIA.
+
 
